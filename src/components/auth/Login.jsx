@@ -1,7 +1,7 @@
 import {Flex, Text, Heading, Input, Stack, Button } from '@chakra-ui/react';
 import React from 'react';
 
-function Signin() {
+function Login() {
 
   const SignBtn ={
     color:'white',
@@ -39,10 +39,8 @@ function Signin() {
             <Text 
             textAlign='center' 
             color='#323232' fontWeight='medium'>
-              Register
+              Login
             </Text> 
-
-            <Input placeholder='display name' variant='flushed' my='7px' focusBorderColor='#323232' type='text'/>
 
             <Input placeholder='email' variant='flushed' my='7px' focusBorderColor='#323232' type='email'/>
 
@@ -50,12 +48,12 @@ function Signin() {
           
            <Button sx={SignBtn}>Sign Up</Button>
             <Text > 
-              You do have an account?
-              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>LogIn</span>
+               have No account?
+              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>SignIn</span>
             </Text>
         </Flex>
      </Stack>
   )
 }
 
-export  {Signin};
+export  {Login};
