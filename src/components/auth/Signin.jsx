@@ -1,5 +1,6 @@
 import {Flex, Text, Heading, Input, Stack, Button } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Signin() {
 
@@ -51,7 +52,10 @@ function Signin() {
            <Button sx={SignBtn}>Sign Up</Button>
             <Text > 
               You do have an account?
-              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>LogIn</span>
+              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>
+              <Link to= '/login'>LogIn</Link>
+
+              </span>
             </Text>
         </Flex>
      </Stack>

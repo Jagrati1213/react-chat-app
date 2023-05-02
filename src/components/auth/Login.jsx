@@ -1,9 +1,10 @@
 import {Flex, Text, Heading, Input, Stack, Button } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Login() {
 
-  const SignBtn ={
+  const LogBtn ={
     color:'white',
     bg:'#323232',
     w:'100%',
@@ -46,10 +47,12 @@ function Login() {
 
             <Input placeholder='password' variant='flushed' my='7px' focusBorderColor='#323232' type='password'/>
           
-           <Button sx={SignBtn}>Sign Up</Button>
+           <Button sx={LogBtn}>LogIn</Button>
             <Text > 
-               have No account?
-              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>SignIn</span>
+               Create new account?
+              <span style={{margin:'0 5px', color:'#323232', fontWeight:'bold', cursor:'pointer'}}>
+              <Link to= '/signin'>Sign Up</Link>
+              </span>
             </Text>
         </Flex>
      </Stack>

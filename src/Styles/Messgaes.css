@@ -1,0 +1,23 @@
+.messages_box {
+    padding: 10px;
+    background: #ddddf7;
+    height: calc(100% - 135px);
+}
+
+.messages.owner {
+    flex-direction: row-reverse;
+}
+
+.messages.owner .msg_content {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.messages.owner .msg_content p {
+    background: #8da4f1;
+    color: white;
+    border-radius: 10px 0 10px 10px;
+    max-width: max-content;
+}
