@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { auth,storage,db } from '../../Firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc,addDoc,collection } from "firebase/firestore"; 
-
+import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate } from 'react-router-dom/dist/umd/react-router-dom.development';
 function Signin() {
 
   const SignBtn ={
@@ -19,6 +19,7 @@ function Signin() {
   }
  
    const [err, setErr] = useState(false);
+   const navigate = useNavigate();
 
    const handleSignin = async (e)=>{
 
@@ -27,6 +28,42 @@ function Signin() {
       const email = e.target[1].value;
       const password = e.target[2].value;
       const file = e.target[3].files[0];
+
+      try{
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        const storageRef = ref(storage, displayName);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+        uploadTask.on(
+          
+          (error) => {
+            setErr(true);
+          }, 
+          () => {
+            getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+              await updateProfile(res.user,{
+                 displayName,
+                 photoURL:downloadURL,
+              });
+
+              // Add a new document in collection "user"
+              await setDoc(doc(db, "users", res.user.uid), {
+                uid:res.user.uid,
+                displayName,
+                photoURL: downloadURL,
+              });
+
+              // Add a new document in collection "cities"
+              await setDoc(doc(db, "usersChats", res.user.uid), {});
+              navigate('/');
+
+            });
+          }
+        );
+
+      }catch(err){
+        setErr(true);
+      }
+
 
   }
    
