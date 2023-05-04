@@ -1,5 +1,7 @@
 import { Button, Flex, Text,Avatar, Box, Stack } from '@chakra-ui/react'
+import { signOut } from 'firebase/auth'
 import React from 'react'
+import { auth } from '../../Firebase'
 
 function Navbar() {
     const logoutBtn={
@@ -18,7 +20,7 @@ function Navbar() {
            <Text paddingInlineStart='12px'>Jagrati Gupta</Text>
        </Stack>
 
-        <Button sx={logoutBtn}>logout</Button>
+        <Button sx={logoutBtn} onClick={()=> signOut(auth)}>logout</Button>
          
     </Flex>
   )
