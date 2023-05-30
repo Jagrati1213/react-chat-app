@@ -25,6 +25,7 @@ function Messages({ user }) {
         <Image
           as="img"
           width="80%"
+          maxWidth={"200px"}
           borderRadius="5px"
           objectFit="cover"
           src="https://bit.ly/dan-abramov"
