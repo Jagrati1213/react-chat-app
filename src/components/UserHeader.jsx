@@ -1,31 +1,35 @@
-import React from "react";
-import { Flex, Text, Avatar, Box, Stack, Switch } from "@chakra-ui/react";
+import React, { useCallback, useState } from "react";
+import { Flex, Text, Avatar, Stack, Box } from "@chakra-ui/react";
 import { FaPlus } from "react-icons/fa";
-// import { signOut } from 'firebase/auth'
-// import { auth } from '../Firebase'
 import { IconContext } from "react-icons";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { SetSwitch } from "../Store/slice/DarkModeSlice";
 
 function UserHeader() {
-  const logoutBtn = {
-    color: "#54656f",
-    cursor: "pointer",
-    ":hover": {
-      bg: "#f0f2f5",
-    },
+  const [isCheck, setIsCheck] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleSwitch = () => {
+    isCheck ? setIsCheck(false) : setIsCheck(true);
+    dispatch(SetSwitch(isCheck));
   };
 
   return (
     <Flex
       alignItems="center"
       justifyContent="space-between"
-      bg="#f0f2f5"
       padding="10px"
-      color="white"
-      borderRadius="10px 0 0 0"
+      className="user_header"
     >
       <Stack alignItems="center" flexDirection="row" wrap="wrap">
         <Avatar src="" />
-        <Text paddingInlineStart="12px" color={"#54656f"} fontWeight="500">
+        <Text
+          className="user_name"
+          paddingInlineStart="12px"
+          color={"#54656f"}
+          fontWeight="500"
+        >
           Jagrati Gupta
         </Text>
       </Stack>
@@ -36,10 +40,18 @@ function UserHeader() {
         wrap="wrap"
         justifyContent={"center"}
       >
-        <Switch size="sm" padding={"0 12px"} />
+        <Box onClick={handleSwitch} margin={"0 12px"} cursor={"pointer"}>
+          <IconContext.Provider value={{ size: "20px" }}>
+            {isCheck ? (
+              <BsFillMoonStarsFill color="#54656f" />
+            ) : (
+              <BsFillSunFill className="icons" />
+            )}
+          </IconContext.Provider>
+        </Box>
 
         <IconContext.Provider value={{ size: "20px" }}>
-          <FaPlus color="#54656f" />
+          <FaPlus className="icons" />
         </IconContext.Provider>
       </Stack>
     </Flex>

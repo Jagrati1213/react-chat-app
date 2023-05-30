@@ -16,15 +16,12 @@ function ChatScreen() {
       style={{ marginLeft: "0%" }}
       bg="white"
       height="-webkit-fill-available"
-      borderRadius="0 6px 0 0"
     >
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        bg="#f0f2f5"
         padding="10px"
-        color="black"
-        borderRadius="0 6px 0 0"
+        className="chat_header"
       >
         <Stack alignItems="center" flexDirection="row" wrap="wrap">
           <Avatar />
@@ -36,7 +33,6 @@ function ChatScreen() {
         className="messages_box"
         overflowY="scroll"
         sx={hideSrollBar}
-        bg="#f2eee8"
         padding="1.2rem"
       >
         <Messages />

@@ -14,6 +14,7 @@ function UsersCard() {
       overflowY="scroll"
       height="82%"
       sx={hideSrollBar}
+      className="user_card_box"
     >
       {Array(10)
         .fill(null)
@@ -26,7 +27,7 @@ function UsersCard() {
                   width={"100%"}
                   maxW={"85%"}
                   justifyContent={"space-between"}
-                  borderBottom="1px solid #e9edef"
+                  className="user_card"
                 >
                   {/* username & msg */}
                   <VStack
@@ -38,20 +39,28 @@ function UsersCard() {
                     overflow={"hidden"}
                     textOverflow={"ellipsis"}
                   >
-                    <Text fontSize="16px" fontWeight="400" color="black">
+                    <Text
+                      fontSize="16px"
+                      fontWeight="400"
+                      className="user_card_name"
+                    >
                       Jagrati Gupta
                     </Text>
                     <Text
                       fontSize="14px"
-                      color="gray"
                       fontWeight="400"
                       marginTop="0px"
+                      className="user_card_msg"
                     >
                       Message
                     </Text>
                   </VStack>
                   {/* Time */}
-                  <Text fontSize="12px" color="gray" marginTop="0px">
+                  <Text
+                    fontSize="12px"
+                    marginTop="0px"
+                    className="user_card_msg"
+                  >
                     12:09 am
                   </Text>
                 </HStack>

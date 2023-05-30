@@ -5,8 +5,9 @@ import "../Styles/Send.css";
 
 function SendInput() {
   return (
-    <Flex className="send_box" justifyContent="space-between" bg="#f0f2f5">
+    <Flex className="send_box" justifyContent="space-between">
       <Input
+        className="send_input"
         placeholder="send massges.."
         variant="unstyled"
         width="100%"
@@ -19,9 +20,9 @@ function SendInput() {
       <HStack className="send" alignItems="center" gap={3}>
         <Input type="file" name="file" id="file" style={{ display: "none" }} />
         <label htmlFor="file">
-          <FaImage cursor="pointer" color="#98969f" fontSize="20px" />
+          <FaImage cursor="pointer" className="icons" fontSize="20px" />
         </label>
-        <Button colorScheme="whatsapp">Send</Button>
+        <Button colorScheme="facebook">Send</Button>
       </HStack>
     </Flex>
   );

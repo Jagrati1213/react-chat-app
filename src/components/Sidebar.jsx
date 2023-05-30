@@ -11,8 +11,7 @@ function Sidebar() {
       bg="white"
       height="-webkit-fill-available"
       overflow={"hidden"}
-      borderRadius="5px"
-      borderRight={"1px solid lightgray"}
+      className="sidebar"
     >
       <UserHeader />
       <SearchUser />

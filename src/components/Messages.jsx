@@ -15,7 +15,7 @@ function Messages({ user }) {
       {/* UserName & time */}
       <Box className="msg_info" color="gray.900" fontWeight="300">
         <Avatar />
-        <Text fontSize="12px" fontWeight="500">
+        <Text fontSize="12px" fontWeight="500" className="chat_time">
           just Now
         </Text>
       </Box>
@@ -30,7 +30,12 @@ function Messages({ user }) {
           objectFit="cover"
           src="https://bit.ly/dan-abramov"
         />
-        <Text as="p" padding="8px 20px" borderRadius="0 10px 10px 10px">
+        <Text
+          as="p"
+          padding="8px 20px"
+          borderRadius="0 10px 10px 10px"
+          className="chat_chat"
+        >
           Hello
         </Text>
       </Box>
