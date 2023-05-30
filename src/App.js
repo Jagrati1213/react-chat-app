@@ -1,30 +1,15 @@
 import './App.css';
-import { Signin } from './components/auth/Signin';
-import { Login } from './components/auth/Login';
-import Home from './components/chatBox/Home';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
-import { useContext } from 'react';
-import { AuthContext } from './components/context/AuthContext';
+import Home from './Page/MainPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
 
-  const { currentUser } = useContext(AuthContext);
-  const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
-      return <Navigate to='/login' />
-    }
-  }
   return (
 
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/signin' element={<Signin />} />
-          <Route index element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>} />
+          <Route index element={<Home />} />
         </Routes>
       </div>
     </Router>
