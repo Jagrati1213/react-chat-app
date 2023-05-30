@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    mode: false
+    mode: true
 }
 
 const DarkModeSlice = createSlice({
@@ -9,7 +9,7 @@ const DarkModeSlice = createSlice({
     initialState,
     reducers: {
         SetSwitch: (state, action) => {
-            const isCheck = action;
+            const isCheck = action.payload;
             state.mode = isCheck;
         }
     }
