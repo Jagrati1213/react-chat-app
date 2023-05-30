@@ -18,7 +18,7 @@ function Home() {
         alignItems="center"
         overflow="hidden"
         flexDirection={"column"}
-        className={mode.payload ? dark.dark_mode : light.light_mode}
+        className={mode ? dark.dark_mode : light.light_mode}
       >
         <HStack
           height="96%"
