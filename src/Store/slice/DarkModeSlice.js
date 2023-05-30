@@ -8,12 +8,12 @@ const DarkModeSlice = createSlice({
     name: 'darkMode',
     initialState,
     reducers: {
-        handleSwitch: (state, action) => {
+        SetSwitch: (state, action) => {
             const isCheck = action;
             state.mode = isCheck;
         }
     }
 })
 
-export const { handleSwitch } = DarkModeSlice.actions;
+export const { SetSwitch } = DarkModeSlice.actions;
 export default DarkModeSlice.reducer;
