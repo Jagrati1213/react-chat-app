@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
-import { AuthContextProvider } from './context/AuthContext';
+import store from './Store/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthContextProvider>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <ChakraProvider>
         <App />
       </ChakraProvider>
-    </React.StrictMode>
-  </AuthContextProvider>
-
+    </Provider>
+  </React.StrictMode>
 
 );
