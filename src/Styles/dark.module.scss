@@ -1,0 +1,63 @@
+.dark_mode {
+  background: linear-gradient(to bottom, #385898 16%, #0b141a 0%);
+
+  // User sideBar
+  :global(.sidebar) {
+    background-color: #111b21;
+    border-right: 1px solid #434b50db;
+  }
+  :global(.user_header) {
+    background-color: #202c33;
+    color: #aebac1;
+  }
+
+  :global(.user_name) {
+    color: #fff;
+  }
+
+  :global(.send_box) {
+    background-color: #202c33;
+  }
+
+  :global(.icons) {
+    color: #aebac1;
+  }
+
+  // user chatbox
+  :global(.chat_header) {
+    background-color: #202c33;
+    color: #aebac1;
+  }
+
+  :global(.search_box) {
+    background-color: #111b21;
+  }
+  :global(.search_input) {
+    color: #aebac1;
+    background-color: #202c33;
+    border: none;
+  }
+  :global(.user_card_box) {
+    background-color: #111b21;
+  }
+  :global(.user_card) {
+    border-bottom: 0.1px solid #202c33;
+  }
+  :global(.user_card_name) {
+    color: whitesmoke;
+  }
+  :global(.user_card_msg) {
+    color: #aebac1;
+  }
+
+  // msg sender
+  :global(.send_input) {
+    background-color: #2a3942;
+  }
+  :global(.messages_box) {
+    background-color: #0b141a;
+  }
+  :global(.chat_time) {
+    color: #aebac1;
+  }
+}

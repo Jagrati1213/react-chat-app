@@ -27,9 +27,10 @@
 .messages.me .msg_content p,
 .messages .msg_content p {
     font-weight: 400;
+    font-size: 18px;
     border-radius: 10px 0 10px 10px;
-    background-color: #bff7b6;
-    color: #161719;
+    background-color: #6b99f6cc;
+    color: #fff;
     word-break: break-all;
     text-align: left;
 }
@@ -50,4 +51,5 @@
 .messages .msg_content p {
     border-radius: 0px 10px 10px 10px;
     background-color: #fff;
+    color: #000;
 }

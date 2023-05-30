@@ -1,0 +1,43 @@
+.light_mode {
+  background: linear-gradient(to bottom, #385898 16%, #eae6df 0%);
+
+  // User Header & sider Bar
+  :global(.user_header) {
+    background-color: #f0f2f5;
+    color: #fff;
+  }
+  :global(.search_box) {
+    background-color: #fff;
+  }
+  :global(.search_input) {
+    color: black;
+    background-color: #f0f2f5;
+  }
+  :global(.user_card_box) {
+    background-color: #fff;
+  }
+  :global(.user_card) {
+    border-bottom: 0.1px solid #e9edef;
+  }
+  :global(.user_card_name) {
+    color: #000;
+  }
+  :global(.user_card_msg) {
+    color: gray;
+  }
+  :global(.icons) {
+    color: #54656f;
+  }
+
+  // Chat screen
+  :global(.chat_header) {
+    background-color: #f0f2f5;
+    color: #000;
+  }
+  :global(.messages_box) {
+    background-color: #f2eee8;
+  }
+  :global(.send_box) {
+    background-color: #f0f2f5;
+  }
+}
