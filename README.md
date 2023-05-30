@@ -5,6 +5,8 @@ Used this web app for chat your's friends
 - React Js
 - Redux/Redux-toolkit
 - Firebase
+- Sass
+- React-icons
 ### Learned ###
 - Authentication with firebase
 - Create user & messages collection
