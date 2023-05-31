@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Switch } from "@chakra-ui/react";
+import { Flex, HStack } from "@chakra-ui/react";
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import ChatScreen from "../components/ChatScreen";
