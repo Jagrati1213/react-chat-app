@@ -13,7 +13,7 @@ function UsersCard() {
       spacing="5"
       overflowY="scroll"
       sx={hideSrollBar}
-      className="user_card_box md:h-[81.4%] h-[77%]"
+      className="user_card_box h-[71%]"
     >
       {Array(10)
         .fill(null)
