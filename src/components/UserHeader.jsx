@@ -3,12 +3,13 @@ import { Flex, Text, Avatar, Stack, Box } from "@chakra-ui/react";
 import { FaPlus } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SetSwitch } from "../Store/slice/DarkModeSlice";
 
 function UserHeader() {
   const [isCheck, setIsCheck] = useState(false);
   const dispatch = useDispatch();
+  const { currentUser } = useSelector((state) => state.users);
 
   const handleSwitch = () => {
     isCheck ? setIsCheck(false) : setIsCheck(true);
@@ -23,14 +24,14 @@ function UserHeader() {
       className="user_header"
     >
       <Stack alignItems="center" flexDirection="row" wrap="wrap">
-        <Avatar src="" />
+        <Avatar src={currentUser.photoURL} />
         <Text
           className="user_name"
           paddingInlineStart="12px"
           color={"#54656f"}
           fontWeight="500"
         >
-          Jagrati Gupta
+          {currentUser.displayName}
         </Text>
       </Stack>
 
