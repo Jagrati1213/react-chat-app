@@ -26,9 +26,9 @@ function UserHeader() {
       <Stack alignItems="center" flexDirection="row" wrap="wrap">
         <Avatar src={currentUser.photoURL} />
         <Text
-          className="user_name"
+          className="user_name capitalize"
           paddingInlineStart="12px"
-          color={"#54656f"}
+          color={"black"}
           fontWeight="500"
         >
           {currentUser.displayName}
