@@ -12,9 +12,8 @@ function UsersCard() {
       padding="10px"
       spacing="5"
       overflowY="scroll"
-      height="82%"
       sx={hideSrollBar}
-      className="user_card_box"
+      className="user_card_box md:h-[81.4%] h-[77%]"
     >
       {Array(10)
         .fill(null)
